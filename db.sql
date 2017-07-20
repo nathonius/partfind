@@ -1,8 +1,15 @@
+CREATE TABLE Strategy (
+    ID INTEGER PRIMARY KEY,
+    name TEXT NOT NULL
+);
+
 CREATE TABLE Part (
     ID INTEGER PRIMARY KEY,
     depth INTEGER PRIMARY KEY,
     parent INTEGER PRIMARY KEY,
+    strategy INTEGER PRIMARY KEY,
     FOREIGN KEY (parent) REFERENCES Part(ID)
+    FOREIGN KEY (strategy) REFERENCES Strategy(ID)
 );
 
 CREATE TABLE File (

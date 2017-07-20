@@ -9,7 +9,8 @@ import sqlite3
 LOG = logging.getLogger(__name__)
 
 def parse_partfile(part, c):
-    pass
+    LOG.info("Parsing part %s", path.split(part)[1])
+    
 
 def build(args):
     pass
